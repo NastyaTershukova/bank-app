@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lavendr - Mobile Bank App</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/phone.css">
+</head>
+
+<body>
+    <div class="page-content">
+        <section class="start-section">
+            <header>
+                <div class="app-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ffffff" viewBox="0 0 256 256">
+                        <path
+                            d="M208,48a87.48,87.48,0,0,0-35.36,7.43c-15.1-25.37-39.92-38-41.06-38.59a8,8,0,0,0-7.16,0c-1.14.58-26,13.22-41.06,38.59A87.48,87.48,0,0,0,48,48a8,8,0,0,0-8,8V96a88.11,88.11,0,0,0,80,87.63v35.43L83.58,200.84a8,8,0,1,0-7.16,14.32l48,24a8,8,0,0,0,7.16,0l48-24a8,8,0,0,0-7.16-14.32L136,219.06V183.63A88.11,88.11,0,0,0,216,96V56A8,8,0,0,0,208,48ZM120,167.56A72.1,72.1,0,0,1,56,96V64.44A72.1,72.1,0,0,1,120,136Zm8-68.2A88.4,88.4,0,0,0,97.36,63.19c9.57-15.79,24-25.9,30.64-30,6.65,4.08,21.08,14.19,30.64,30A88.46,88.46,0,0,0,128,99.36ZM200,96a72.1,72.1,0,0,1-64,71.56V136a72.1,72.1,0,0,1,64-71.56Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="progress-bar">
+                    <button class="item">
+                        <div><span></span></div>
+                    </button>
+                </div>
+                <span class="skip">Skip</span>
+            </header>
+            <div class="start-section_content active">
+                <h2 class="section-title">Switch how you handle your cash!</h2>
+                <img src="img/start-page-img.png" class="main-photo slide1">
+            </div>
+            <div class="start-section_content">
+                <h2 class="section-title">Take control of your finances today!</h2>
+                <img src="img/start-page-img2.png" class="main-photo slide2">
+            </div>
+            <div class="start-section_content">
+                <h2 class="section-title">Reimagine the way you manage money!</h2>
+                <img src="img/start-page-img3.png" class="main-photo slide3">
+            </div>
+            <div class="start-section-buttons">
+                <button class="section-button blue">Log In</button>
+                <button class="section-button white sign-up">Sign Up</button>
+            </div>
+        </section>
+        <section class="section sign-up">
+            <button class="round-button right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path
+                        d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+                    </path>
+                </svg></button>
+            <div class="progress-bar long">
+                <button class="item">
+                    <div><span></span></div>
+                </button>
+            </div>
+            <h2 class="section-title">Hey, start by setting up your sign-in ID!</h2>
+            <div class="section-content">
+                <div class="input-content">
+                    <div class="input-container">
+                        <span>Email</span>
+                        <input type="email">
+                    </div>
+                    <div class="input-container">
+                        <span>Password</span>
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="sign-up-requests">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path
+                                d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z">
+                            </path>
+                        </svg>
+                        <p>Minimum 8 Characters</p>
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path
+                                d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z">
+                            </path>
+                        </svg>
+                        <p>At least 1 symbols</p>
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path
+                                d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z">
+                            </path>
+                        </svg>
+                        <p>At least 1 number</p>
+                    </span>
+                </div>
+                <p class="commitment">I agree to Lavendr's <a href="">Privacy Policy</a>, <a href="">Terms Of
+                        Use</a>, and <a href="">Electronic Communication Consent</a></p>
+                <button class="section-button blue continue">Agree And Continue</button>
+            </div>
+        </section>
+        <section class="section enter-code">
+            <button class="round-button left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
+                    </path>
+                </svg>
+            </button>
+            <div class="progress-bar long">
+                <button class="item">
+                    <div><span></span></div>
+                </button>
+            </div>
+            <div class="section-content">
+                <h2 class="section-title">Enter Verification Code</h2>
+                <p class="section-description">We just sent a 6-digit verification code to the number you provide:</p>
+                <div class="input-code-container">
+                    <span>6-digit code</span>
+                    <div class="input-code">
+                        <input type="tel" maxlength="1">
+                        <input type="tel" maxlength="1">
+                        <input type="tel" maxlength="1">
+                        <input type="tel" maxlength="1">
+                        <input type="tel" maxlength="1">
+                        <input type="tel" maxlength="1">
+                    </div>
+                </div>
+                <span class="resend-code">Resend Code</span>
+                <div class="commitment">
+                    <input type="checkbox">
+                    <p>I agree to receive special offers and promotions via SMS at the number provided. Consent is not a
+                        condition to purchase, message & data rases may apply. Message frequency varies. Reply «STOP» to
+                        unsubscribe. View our <a href="">Terms Of Use</a> and <a href="">Privacy Policy</a> for details
+                    </p>
+                </div>
+                <button class="section-button blue next">Next</button>
+            </div>
+        </section>
+        <section class="section create-passcode">
+            <button class="round-button left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
+                    </path>
+                </svg>
+            </button>
+            <div class="progress-bar long">
+                <button class="item">
+                    <div><span></span></div>
+                </button>
+            </div>
+            <div class="section-content">
+                <h2 class="section-title">Create 4-digit app passcode</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="lock" width="56" height="56" fill="#3B51C6"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M208,80H96V56a32,32,0,0,1,32-32c15.37,0,29.2,11,32.16,25.59a8,8,0,0,0,15.68-3.18C171.32,24.15,151.2,8,128,8A48.05,48.05,0,0,0,80,56V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80Zm-80,84a12,12,0,1,1,12-12A12,12,0,0,1,128,164Z">
+                    </path>
+                </svg>
+                <div class="input-passcode">
+                    <input type="password" maxlength="1">
+                    <input type="password" maxlength="1">
+                    <input type="password" maxlength="1">
+                    <input type="password" maxlength="1">
+                </div>
+                <div class="passcode-keyboard">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button class="zero-button">0</button>
+                    <button class="delete-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            fill="#000000" viewBox="0 0 256 256">
+                            <path
+                                d="M216,40H68.53a16.08,16.08,0,0,0-13.72,7.77L9.14,123.88a8,8,0,0,0,0,8.24l45.67,76.11A16.08,16.08,0,0,0,68.53,216H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM61.67,204.12,68.53,200h0ZM216,200H68.53l-43.2-72,43.2-72H216ZM106.34,146.34,124.69,128l-18.35-18.34a8,8,0,0,1,11.32-11.32L136,116.69l18.34-18.35a8,8,0,0,1,11.32,11.32L147.31,128l18.35,18.34a8,8,0,0,1-11.32,11.32L136,139.31l-18.34,18.35a8,8,0,0,1-11.32-11.32Z">
+                            </path>
+                        </svg></button>
+                </div>
+            </div>
+        </section>
+        <section class="section citizen">
+            <button class="round-button left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
+                    </path>
+                </svg>
+            </button>
+            <div class="section-content">
+                <h2 class="section-title">Are you a citizen of United States?</h2>
+                <p class="section-description">We need this information to open your account</p>
+                <img class="country-flag" src="img/usa.webp">
+                <button class="section-button blue">Confirm</button>
+            </div>
+        </section>
+        <section class="section pick-document">
+            <button class="round-button left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
+                    </path>
+                </svg>
+            </button>
+            <div class="section-content">
+                <h2 class="section-title">Pick an original document to upload</h2>
+                <p class="section-description">Please submit a valid document to confirm your residency in Singapure.
+                </p>
+                <div class="documents-container">
+                    <div class="document-row">
+                        <div class="document-title">
+                            <svg class="document-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path
+                                    d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM136,176H120a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm64,0H168a8,8,0,0,1,0-16h32a8,8,0,0,1,0,16ZM32,88V64H224V88Z">
+                                </path>
+                            </svg>
+                            <span>Identity Card</span>
+                        </div>
+                        <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path
+                                d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <hr>
+                    <div class="document-row">
+                        <div class="document-title">
+                            <svg class="document-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path
+                                    d="M200,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24ZM96,48h64a8,8,0,0,1,0,16H96a8,8,0,0,1,0-16Zm84.81,150.4a8,8,0,0,1-11.21-1.6,52,52,0,0,0-83.2,0,8,8,0,1,1-12.8-9.6A67.88,67.88,0,0,1,101,165.51a40,40,0,1,1,53.94,0A67.88,67.88,0,0,1,182.4,187.2,8,8,0,0,1,180.81,198.4ZM152,136a24,24,0,1,1-24-24A24,24,0,0,1,152,136Z">
+                                </path>
+                            </svg>
+                            <span>USA Pass</span>
+                        </div>
+                        <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path
+                                d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <hr>
+                    <div class="document-row">
+                        <div class="document-title">
+                            <svg class="document-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path
+                                    d="M112,120a16,16,0,1,1-16-16A16,16,0,0,1,112,120ZM232,56V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM135.75,166a39.76,39.76,0,0,0-17.19-23.34,32,32,0,1,0-45.12,0A39.84,39.84,0,0,0,56.25,166a8,8,0,0,0,15.5,4c2.64-10.25,13.06-18,24.25-18s21.62,7.73,24.25,18a8,8,0,1,0,15.5-4ZM200,144a8,8,0,0,0-8-8H152a8,8,0,0,0,0,16h40A8,8,0,0,0,200,144Zm0-32a8,8,0,0,0-8-8H152a8,8,0,0,0,0,16h40A8,8,0,0,0,200,112Z">
+                                </path>
+                            </svg>
+                            <span>Passport</span>
+                        </div>
+                        <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path
+                                d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <button class="section-button blue">Next</button>
+        </section>
+        <section class="section discover-banking">
+            <button class="round-button left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path
+                        d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+                    </path>
+                </svg>
+            </button>
+            <div class="section-content">
+                <h2 class="section-title">Discover Mobile Banking That Makes Life Easy!</h2>
+                <div class="cashback-container">
+                    <img src="img/cashback.jpg">
+                    <div class="cashback-text">
+                        <h3>Earn up to 2% cashback</h3>
+                        <p>Get cashback on eligible Mastercard payments.</p>
+                    </div>
+                </div>
+                <div class="progress-bar-cashback">
+                    <button class="item selected">
+                        <div><span></span></div>
+                    </button>
+                    <button class="item">
+                        <div><span></span></div>
+                    </button>
+                    <button class="item">
+                        <div><span></span></div>
+                    </button>
+                </div>
+                <div class="section-buttons">
+                    <button class="section-button blue">Verify Now</button>
+                    <button class="section-button white">Verify Later</button>
+                </div>
+            </div>
+        </section>
+        <section class="section select-countries">
+            <button class="round-button left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path
+                        d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+                    </path>
+                </svg>
+            </button>
+            <span class="country">Country</span>
+            <hr class="select-countries_hr">
+            <input class="search-input" type="search" placeholder="Search">
+            <div class="countries-list">
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/canada.png">
+                        </div>
+                        <span>Canada</span>
+                    </div>
+                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/china.png">
+                        </div>
+                        <span>China</span>
+                    </div>
+                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/france.png">
+                        </div>
+                        <span>France</span>
+                    </div>
+                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/germany.png">
+                        </div>
+                        <span>Germany</span>
+                    </div>
+                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/japan.png">
+                        </div>
+                        <span>Japan</span>
+                    </div>
+                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/russia.png">
+                        </div>
+                        <span>Russia</span>
+                    </div>
+                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/spain.png">
+                        </div>
+                        <span>Spain</span>
+                    </div>
+                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <!--<hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/turkey.png">
+                        </div>
+                        <span>Turkey</span>
+                    </div>
+                    <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/united-kingdom.png">
+                        </div>
+                        <span>United Kingdom</span>
+                    </div>
+                    <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div>
+                <hr>
+                <div class="select-country">
+                    <div class="country-name">
+                        <div class="country-icon">
+                            <img src="img/united-states.png">
+                        </div>
+                        <span>USA</span>
+                    </div>
+                    <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                        </path>
+                    </svg>
+                </div> -->
+            </div>
+        </section>
+        <section class="section choose-plan">
+            <div class="choose-plan_header">
+                <h3>Choose your plan</h3>
+                <span>Skip</span>
+            </div>
+            <div class="choose-plan_buttons">
+                <button class="choose-plan-button active">Bloom</button>
+                <button class="choose-plan-button">Ruby</button>
+            </div>
+            <img src="img/credit-card.avif">
+            <div class="top-offers">
+                <div class="top-offers_header">
+                    <h3>Lavendr Bloom</h3>
+                    <span>from $19/month</span>
+                </div>
+                <hr>
+                <span class="top-offers_title">TOP OFFERS</span>
+                <div class="top-offers_list">
+                    <div class="top-offer_container">
+                        <div class="top-offer_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path
+                                    d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="top-offer_description">
+                            <h3>Basic Banking Features</h3>
+                            <p>Includes essential services like account management, money tranfers, and digital
+                                payments.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="top-offer_container">
+                        <div class="top-offer_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path
+                                    d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="top-offer_description">
+                            <h3>Basic Banking Features</h3>
+                            <p>Includes essential services like account management, money tranfers, and digital
+                                payments.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="top-offer_container">
+                        <div class="top-offer_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path
+                                    d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="top-offer_description">
+                            <h3>Basic Banking Features</h3>
+                            <p>Includes essential services like account management, money tranfers, and digital
+                                payments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue-container">
+                <button class="section-button blue">Continue with Bloom</button>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="js/master.js"></script>
+</body>
+
+</html>
