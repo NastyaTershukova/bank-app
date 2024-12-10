@@ -22,7 +22,6 @@ function showSlide(number) {
         document.querySelector('.start-section_content.active').classList.remove('active');
     }
     slides[number].classList.add('active');
-    restartProgressBar(number);
 }
 showSlide(0);
 
