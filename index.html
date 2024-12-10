@@ -9,9 +9,22 @@
 </head>
 
 <body>
+    <header class="hidden">
+        <button onclick="previousScreen()" class="round-button left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
+                </path>
+            </svg>
+        </button>
+        <div class="progress-bar long">
+            <button class="item">
+                <div><span></span></div>
+            </button>
+        </div>
+    </header>
     <div class="page-content">
-        <section class="start-section">
-            <header>
+        <section class="start-section active">
+            <div class="start-header">
                 <div class="app-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ffffff" viewBox="0 0 256 256">
                         <path
@@ -25,45 +38,37 @@
                     </button>
                 </div>
                 <span class="skip">Skip</span>
-            </header>
-            <div class="start-section_content active">
-                <h2 class="section-title">Switch how you handle your cash!</h2>
-                <img src="img/start-page-img.png" class="main-photo slide1">
             </div>
-            <div class="start-section_content">
-                <h2 class="section-title">Take control of your finances today!</h2>
-                <img src="img/visa-1.png" class="main-photo slide2">
-            </div>
-            <div class="start-section_content">
-                <h2 class="section-title">Reimagine the way you manage money!</h2>
-                <img src="img/start-page-img3.png" class="main-photo slide3">
+            <div class="start-slides">
+                <div class="start-section_content active">
+                    <h2 class="section-title">Switch how you handle your cash!</h2>
+                    <img src="img/start-page-img.png" class="main-photo slide1">
+                </div>
+                <div class="start-section_content">
+                    <h2 class="section-title">Take control of your finances today!</h2>
+                    <img src="img/visa-1.png" class="main-photo slide2">
+                </div>
+                <div class="start-section_content">
+                    <h2 class="section-title">Reimagine the way you manage money!</h2>
+                    <img src="img/start-page-img3.png" class="main-photo slide3">
+                </div>
             </div>
             <div class="start-section-buttons">
                 <button class="section-button blue">Log In</button>
-                <button class="section-button white sign-up">Sign Up</button>
+                <button class="section-button white button-sign_up">Sign Up</button>
             </div>
         </section>
         <section class="section sign-up">
-            <button class="round-button right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                    <path
-                        d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
-                    </path>
-                </svg></button>
-            <div class="progress-bar long">
-                <button class="item">
-                    <div><span></span></div>
-                </button>
-            </div>
             <h2 class="section-title">Hey, start by setting up your sign-in ID!</h2>
             <div class="section-content">
                 <div class="input-content">
                     <div class="input-container">
                         <span>Email</span>
-                        <input type="email">
+                        <input type="email" class="input-email">
                     </div>
                     <div class="input-container">
                         <span>Password</span>
-                        <input type="password">
+                        <input type="password" class="input-password">
                     </div>
                 </div>
                 <div class="sign-up-requests">
@@ -94,33 +99,33 @@
                 </div>
                 <p class="commitment">I agree to Lavendr's <a href="">Privacy Policy</a>, <a href="">Terms Of
                         Use</a>, and <a href="">Electronic Communication Consent</a></p>
-                <button class="section-button blue continue">Agree And Continue</button>
+
+                <div class="section-buttons">
+                    <button class="section-button blue button-email">Agree And Continue</button>
+                </div>
+            </div>
+        </section>
+        <section class="section number">
+            <div class="section-content">
+                <h2 class="section-title">Enter your Phone Number</h2>
+            </div>
+            <div class="section-buttons">
+                <button class="section-button blue button-number">Next</button>
             </div>
         </section>
         <section class="section enter-code">
-            <button class="round-button left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
-                    </path>
-                </svg>
-            </button>
-            <div class="progress-bar long">
-                <button class="item">
-                    <div><span></span></div>
-                </button>
-            </div>
             <div class="section-content">
                 <h2 class="section-title">Enter Verification Code</h2>
                 <p class="section-description">We just sent a 6-digit verification code to the number you provide:</p>
                 <div class="input-code-container">
                     <span>6-digit code</span>
                     <div class="input-code">
-                        <input type="tel" maxlength="1">
-                        <input type="tel" maxlength="1">
-                        <input type="tel" maxlength="1">
-                        <input type="tel" maxlength="1">
-                        <input type="tel" maxlength="1">
-                        <input type="tel" maxlength="1">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
                     </div>
                 </div>
                 <span class="resend-code">Resend Code</span>
@@ -131,21 +136,12 @@
                         unsubscribe. View our <a href="">Terms Of Use</a> and <a href="">Privacy Policy</a> for details
                     </p>
                 </div>
-                <button class="section-button blue next">Next</button>
+                <div class="section-buttons">
+                    <button class="section-button blue button-code">Next</button>
+                </div>
             </div>
         </section>
         <section class="section create-passcode">
-            <button class="round-button left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
-                    </path>
-                </svg>
-            </button>
-            <div class="progress-bar long">
-                <button class="item">
-                    <div><span></span></div>
-                </button>
-            </div>
             <div class="section-content">
                 <h2 class="section-title">Create 4-digit app passcode</h2>
                 <svg xmlns="http://www.w3.org/2000/svg" class="lock" width="56" height="56" fill="#3B51C6"
@@ -181,12 +177,6 @@
             </div>
         </section>
         <section class="section citizen">
-            <button class="round-button left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
-                    </path>
-                </svg>
-            </button>
             <div class="section-content">
                 <h2 class="section-title">Are you a citizen of United States?</h2>
                 <p class="section-description">We need this information to open your account</p>
@@ -195,12 +185,6 @@
             </div>
         </section>
         <section class="section pick-document">
-            <button class="round-button left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
-                    </path>
-                </svg>
-            </button>
             <div class="section-content">
                 <h2 class="section-title">Pick an original document to upload</h2>
                 <p class="section-description">Please submit a valid document to confirm your residency in Singapure.
@@ -258,13 +242,6 @@
             <button class="section-button blue">Next</button>
         </section>
         <section class="section discover-banking">
-            <button class="round-button left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                    <path
-                        d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
-                    </path>
-                </svg>
-            </button>
             <div class="section-content">
                 <h2 class="section-title">Discover Mobile Banking That Makes Life Easy!</h2>
                 <div class="cashback-container">
@@ -292,13 +269,6 @@
             </div>
         </section>
         <section class="section select-countries">
-            <button class="round-button left">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                    <path
-                        d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
-                    </path>
-                </svg>
-            </button>
             <span class="country">Country</span>
             <hr class="select-countries_hr">
             <input class="search-input" type="search" placeholder="Search">

@@ -12,34 +12,66 @@
 html,
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Lora';
-    font-size: 100%;
     background: #ffffff;
-    height: 100%;
+}
+header {
+    position: fixed;
+    top: 32px;
+    z-index: 2;
+    width: 100vw;
+    padding: 0 16px;
+    transition: .5s ease-in transform;
+}
+header.hidden {
+    transform: translateY(-96px);
+}
+.start-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 24px;
+}
+section {
+    padding: 96px var(--page-padding) 0 var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: clip;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: .5s ease-in-out;
+    transition-property: opacity, transform;
+    background-color: white;
+}
+section.active {
+    pointer-events: all;
+    transform: translateX(0);
+    opacity: 1;
+}
+section.hidden {
+    transform: translateX(-100%);
 }
 
 .page-content {
-    width: 100%;
+    width: 100vw;
     max-width: 900px;
+    height: 100vh;
     margin: 0 auto;
+    position: relative;
+    overflow-x: clip;
 }
 
 .start-section {
     background: #F2BED9;
     padding: 0 var(--page-padding);
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: clip;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: var(--section-gap);
 }
 
 .app-icon {
@@ -111,17 +143,24 @@ header {
     font-size: 16px;
     cursor: pointer;
 }
-
+.start-slides {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 .start-section_content {
-    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease-out opacity;
+    position: absolute;
 }
 
 .start-section_content.active {
-    display: flex;
+    opacity: 1;
+    pointer-events: all;
 }
 
 .section-title {
@@ -135,8 +174,9 @@ header {
     justify-content: center;
     gap: 8px;
     margin-bottom: var(--section-gap);
-    position: relative;
-    /* margin-top: 400px; */
+    position: fixed;
+    bottom: 0;
+    width: calc(100vw - 32px);
 }
 
 .section-button {
@@ -180,14 +220,6 @@ header {
     width: 500px;
     transform: rotate(-30deg);
     top: 45%;
-}
-
-.section {
-    padding: 24px var(--page-padding) 0 var(--page-padding);
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    display: none;
 }
 
 .round-button {
@@ -303,9 +335,9 @@ header {
 .input-passcode {
     margin-top: 8px;
     display: flex;
-    gap: 8px;
+    max-width: 350px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -318,6 +350,7 @@ header {
     text-align: center;
     font-family: 'Lora';
     font-weight: 800;
+    font-size: 16px;
 }
 
 .resend-code {
@@ -533,6 +566,10 @@ header {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    position: fixed;
+    bottom: 0;
+    width: calc(100vw - 32px);
+    padding-bottom: var(--page-padding);
 }
 
 .select-countries-header {
@@ -650,6 +687,7 @@ header {
     font-size: 14px;
     padding: 4px;
     cursor: pointer;
+    background: none;
 }
 
 .choose-plan img {
