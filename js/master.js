@@ -1,8 +1,8 @@
-document.querySelector('.button-sign_up').addEventListener('click', function(){
+document.querySelector('.button-sign_up').addEventListener('click', function () {
     nextScreen();
 });
 
-document.querySelector('.button-email').addEventListener('click', function(){
+document.querySelector('.button-email').addEventListener('click', function () {
     let password = document.querySelector('.input-password').value.trim();
 
     let emailRegex = /^[a-zA-Z0-9./%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/g;
@@ -14,11 +14,11 @@ document.querySelector('.button-email').addEventListener('click', function(){
     nextScreen();
 });
 
-document.querySelector('.button-number').addEventListener('click', function(){
+document.querySelector('.button-number').addEventListener('click', function () {
     nextScreen();
 });
 
-document.querySelector('.button-code').addEventListener('click', function(){
+document.querySelector('.button-code').addEventListener('click', function () {
     nextScreen();
 });
 
@@ -41,6 +41,8 @@ function showScreen(value) {
     screens[value].classList.add('active');
     screens[value].classList.remove('hidden');
 }
+
+showScreen(2);
 
 function nextScreen() {
     currentScreen++;
@@ -75,24 +77,34 @@ function startSpinningSlides() {
 startSpinningSlides();
 
 let codeInputs = document.querySelectorAll('.input-code input');
-for (let i=0; i < codeInputs.length; i++) {
-    codeInputs[i].addEventListener('input', function() {
+for (let i = 0; i < codeInputs.length; i++) {
+    codeInputs[i].addEventListener('input', function () {
         let value = codeInputs[i].value.trim();
         if (Number.isNaN(Number(value))) {
             codeInputs[i].value = '';
             return;
         }
         if (value.length == 1) {
-            codeInputs[i+1].focus();
+            codeInputs[i + 1].focus();
         }
     });
-    codeInputs[i].addEventListener('keydown', function(event) {
+    codeInputs[i].addEventListener('keydown', function (event) {
         if (event.key === 'Backspace') {
             if (codeInputs[i].value.trim().length != 0) {
                 codeInputs[i].value = '';
                 event.preventDefault();
             }
-            codeInputs[i-1].focus();
+            codeInputs[i - 1].focus();
         }
     });
 }
+
+document.querySelector('.change-country').addEventListener('click', function () {
+    document.querySelector('.select-countries').classList.add('active');
+    document.querySelector('.select-countries-overlay').classList.add('active');
+});
+
+document.querySelector('.round-button.close').addEventListener('click', function () {
+    document.querySelector('.select-countries').classList.remove('active');
+    document.querySelector('.select-countries-overlay').classList.remove('active');
+});

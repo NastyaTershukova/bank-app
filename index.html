@@ -106,11 +106,146 @@
             </div>
         </section>
         <section class="section number">
+            <h2 class="section-title">Enter your Phone Number</h2>
             <div class="section-content">
-                <h2 class="section-title">Enter your Phone Number</h2>
+                <div class="input-content">
+                    <div class="input-container">
+                        <span>Phone Number</span>
+                        <div class="country-input">
+                            <button class="change-country">
+                                <div><img src="img/canada.png"></div>
+                            </button>
+                            <input type="tel" class="input-tel">
+                        </div>
+                    </div>
+                </div>
+                <p class="commitment">I agree to Lavendr's <a href="">Privacy Policy</a>, <a href="">Terms Of
+                        Use</a>, and <a href="">Electronic Communication Consent</a></p>
             </div>
             <div class="section-buttons">
                 <button class="section-button blue button-number">Next</button>
+            </div>
+            <div class="select-countries-overlay">
+                <div class="select-countries">
+                    <div class="select-countries-header">
+                        <button class="round-button left close">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path
+                                    d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <span class="country">Country</span>
+                    </div>
+                    <hr class="select-countries_hr">
+                    <input class="search-input" type="search" placeholder="Search">
+                    <div class="countries-list">
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/canada.png">
+                                </div>
+                                <span>Canada</span>
+                            </div>
+                            <span class="phone-code">+1</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/china.png">
+                                </div>
+                                <span>China</span>
+                            </div>
+                            <!-- <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path
+                                d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
+                            </path>
+                        </svg> -->
+                            <span class="phone-code">+86</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/france.png">
+                                </div>
+                                <span>France</span>
+                            </div>
+                            <span class="phone-code">+33</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/germany.png">
+                                </div>
+                                <span>Germany</span>
+                            </div>
+                            <span class="phone-code">+49</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/japan.png">
+                                </div>
+                                <span>Japan</span>
+                            </div>
+                            <span class="phone-code">+81</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/russia.png">
+                                </div>
+                                <span>Russia</span>
+                            </div>
+                            <span class="phone-code">+7</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/spain.png">
+                                </div>
+                                <span>Spain</span>
+                            </div>
+                            <span class="phone-code">+34</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/turkey.png">
+                                </div>
+                                <span>Turkey</span>
+                            </div>
+                            <span class="phone-code">+90</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/united-kingdom.png">
+                                </div>
+                                <span>United Kingdom</span>
+                            </div>
+                            <span class="phone-code">+44</span>
+                        </div>
+                        <hr>
+                        <div class="select-country">
+                            <div class="country-name">
+                                <div class="country-icon">
+                                    <img src="img/united-states.png">
+                                </div>
+                                <span>USA</span>
+                            </div>
+                            <span class="phone-code">+1</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section enter-code">
@@ -129,13 +264,17 @@
                     </div>
                 </div>
                 <span class="resend-code">Resend Code</span>
-                <div class="commitment">
+                <label class="commitment">
                     <input type="checkbox">
-                    <p>I agree to receive special offers and promotions via SMS at the number provided. Consent is not a
-                        condition to purchase, message & data rases may apply. Message frequency varies. Reply «STOP» to
-                        unsubscribe. View our <a href="">Terms Of Use</a> and <a href="">Privacy Policy</a> for details
+                    <span class="checkmark" checked="checked"></span>
+                    <p>I agree to receive special offers and promotions via SMS at the number provided. Consent is
+                        not a
+                        condition to purchase, message & data rases may apply. Message frequency varies. Reply
+                        «STOP» to
+                        unsubscribe. View our <a href="">Terms Of Use</a> and <a href="">Privacy Policy</a> for
+                        details
                     </p>
-                </div>
+                </label>
                 <div class="section-buttons">
                     <button class="section-button blue button-code">Next</button>
                 </div>
@@ -157,22 +296,44 @@
                     <input type="password" maxlength="1">
                 </div>
                 <div class="passcode-keyboard">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button class="zero-button">0</button>
-                    <button class="delete-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            fill="#000000" viewBox="0 0 256 256">
-                            <path
-                                d="M216,40H68.53a16.08,16.08,0,0,0-13.72,7.77L9.14,123.88a8,8,0,0,0,0,8.24l45.67,76.11A16.08,16.08,0,0,0,68.53,216H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM61.67,204.12,68.53,200h0ZM216,200H68.53l-43.2-72,43.2-72H216ZM106.34,146.34,124.69,128l-18.35-18.34a8,8,0,0,1,11.32-11.32L136,116.69l18.34-18.35a8,8,0,0,1,11.32,11.32L147.31,128l18.35,18.34a8,8,0,0,1-11.32,11.32L136,139.31l-18.34,18.35a8,8,0,0,1-11.32-11.32Z">
-                            </path>
-                        </svg></button>
+                    <button>
+                        <div>1</div>
+                    </button>
+                    <button>
+                        <div>2</div>
+                    </button>
+                    <button>
+                        <div>3</div>
+                    </button>
+                    <button>
+                        <div>4</div>
+                    </button>
+                    <button>
+                        <div>5</div>
+                    </button>
+                    <button>
+                        <div>6</div>
+                    </button>
+                    <button>
+                        <div>7</div>
+                    </button>
+                    <button>
+                        <div>8</div>
+                    </button>
+                    <button>
+                        <div>9</div>
+                    </button>
+                    <button class="zero-button">
+                        <div>0</div>
+                    </button>
+                    <button class="delete-button">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M216,40H68.53a16.08,16.08,0,0,0-13.72,7.77L9.14,123.88a8,8,0,0,0,0,8.24l45.67,76.11A16.08,16.08,0,0,0,68.53,216H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM61.67,204.12,68.53,200h0ZM216,200H68.53l-43.2-72,43.2-72H216ZM106.34,146.34,124.69,128l-18.35-18.34a8,8,0,0,1,11.32-11.32L136,116.69l18.34-18.35a8,8,0,0,1,11.32,11.32L147.31,128l18.35,18.34a8,8,0,0,1-11.32,11.32L136,139.31l-18.34,18.35a8,8,0,0,1-11.32-11.32Z">
+                                </path>
+                            </svg></div>
+                    </button>
                 </div>
             </div>
         </section>
@@ -181,7 +342,10 @@
                 <h2 class="section-title">Are you a citizen of United States?</h2>
                 <p class="section-description">We need this information to open your account</p>
                 <img class="country-flag" src="img/usa.webp">
-                <button class="section-button blue">Confirm</button>
+                <div class="start-section-buttons">
+                    <button class="section-button white">No, I'm not</button>
+                    <button class="section-button blue">Confirm</button>
+                </div>
             </div>
         </section>
         <section class="section pick-document">
@@ -266,152 +430,6 @@
                     <button class="section-button blue">Verify Now</button>
                     <button class="section-button white">Verify Later</button>
                 </div>
-            </div>
-        </section>
-        <section class="section select-countries">
-            <span class="country">Country</span>
-            <hr class="select-countries_hr">
-            <input class="search-input" type="search" placeholder="Search">
-            <div class="countries-list">
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/canada.png">
-                        </div>
-                        <span>Canada</span>
-                    </div>
-                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/china.png">
-                        </div>
-                        <span>China</span>
-                    </div>
-                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/france.png">
-                        </div>
-                        <span>France</span>
-                    </div>
-                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/germany.png">
-                        </div>
-                        <span>Germany</span>
-                    </div>
-                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/japan.png">
-                        </div>
-                        <span>Japan</span>
-                    </div>
-                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/russia.png">
-                        </div>
-                        <span>Russia</span>
-                    </div>
-                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/spain.png">
-                        </div>
-                        <span>Spain</span>
-                    </div>
-                    <svg class="next-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <!--<hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/turkey.png">
-                        </div>
-                        <span>Turkey</span>
-                    </div>
-                    <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/united-kingdom.png">
-                        </div>
-                        <span>United Kingdom</span>
-                    </div>
-                    <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div>
-                <hr>
-                <div class="select-country">
-                    <div class="country-name">
-                        <div class="country-icon">
-                            <img src="img/united-states.png">
-                        </div>
-                        <span>USA</span>
-                    </div>
-                    <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path
-                            d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z">
-                        </path>
-                    </svg>
-                </div> -->
             </div>
         </section>
         <section class="section choose-plan">

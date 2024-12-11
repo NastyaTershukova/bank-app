@@ -1,5 +1,5 @@
-@media screen and (min-width: 425px) {
-    .main-photo {
+@media screen and (min-width: 320px) {
+    .main-photo.slide1 {
         right: -10%;
     }
 }
