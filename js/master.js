@@ -42,7 +42,10 @@ function showScreen(value) {
     screens[value].classList.remove('hidden');
 }
 
-showScreen(2);
+function widthProgressBar() {
+    const value = ((currentScreen + 1) / screens.length) * 100;
+    document.querySelector('.progress-bar .item span').style.setProperty('--value',`${value}%`);
+}
 
 function nextScreen() {
     currentScreen++;
@@ -53,6 +56,7 @@ function previousScreen() {
     currentScreen--;
     showScreen(currentScreen);
 }
+widthProgressBar();
 
 function showSlide(number) {
     if (document.querySelector('.start-section_content.active')) {

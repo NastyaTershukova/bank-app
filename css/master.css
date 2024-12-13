@@ -7,6 +7,7 @@
 
     --page-padding: 16px;
     --section-gap: 32px;
+    --value: 70%;
 }
 
 html,
@@ -124,7 +125,7 @@ section.hidden {
 .progress-bar .item span {
     background-color: #3B51C6;
     height: 100%;
-    width: 0;
+    width: var(--value);
     display: block;
     animation-name: ItemProgress;
     animation-duration: 5s;
@@ -133,7 +134,7 @@ section.hidden {
     padding: 0;
 }
 
-@keyframes ItemProgress {
+/* @keyframes ItemProgress {
     from {
         width: 0;
     }
@@ -141,7 +142,7 @@ section.hidden {
     to {
         width: 100%;
     }
-}
+} */
 
 .skip {
     color: #3B51C6;
