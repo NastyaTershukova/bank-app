@@ -132,6 +132,7 @@ section.hidden {
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     padding: 0;
+    transition: .5s width ease-out;
 }
 
 /* @keyframes ItemProgress {
@@ -262,6 +263,7 @@ section.hidden {
 .input-container {
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
 
 .input-container span {
@@ -274,9 +276,26 @@ section.hidden {
     border: none;
     padding: 12px 10px;
     border-radius: 8px;
-    margin-top: 4px;
     font-size: 14px;
     font-family: 'Lora';
+}
+
+.error-message {
+    background-color: #F9DCE3;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 4px;
+    display: block;
+}
+
+.error-message p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #D52A39;
+}
+
+.error-message.hidden {
+    display: none;
 }
 
 .sign-up-requests {
@@ -342,13 +361,26 @@ section.hidden {
     font-weight: 600;
 }
 
+.input-code-container {
+    margin: 0 auto;
+}
+
+.input-passcode, .section.create-passcode .section-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-code {
+    margin-top: 8px;
+}
+
 .input-code,
 .input-passcode {
-    margin-top: 8px;
     display: flex;
     max-width: 350px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8px;
     width: 100%;
 }
 
@@ -357,7 +389,7 @@ section.hidden {
     aspect-ratio: 1/1;
     background-color: #EAEBED;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     text-align: center;
     font-family: 'Lora';
     font-weight: 800;
@@ -449,7 +481,7 @@ section.hidden {
     transform: rotate(-10deg);
 }
 
-.input-passcode input {
+.input-passcode div {
     width: 80px;
     height: 42px;
     background-color: #EAEBED;
@@ -458,6 +490,9 @@ section.hidden {
     text-align: center;
     font-family: 'Lora';
     font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .passcode-keyboard {
@@ -499,7 +534,7 @@ section.hidden {
     grid-column: 3;
 }
 
-.zero-button {
+.zero {
     grid-column: 2;
 }
 
@@ -681,7 +716,8 @@ section.hidden {
     flex-direction: column;
     width: 100%;
     overflow: clip;
-    top: 112px;
+    --countries-top: 80px;
+    top: var(--countries-top);
     left: 0;
     padding: var(--page-padding);
     pointer-events: none;
@@ -692,7 +728,7 @@ section.hidden {
     transition: .5s ease-in-out;
     transition-property: opacity, transform;
     overflow-y: auto;
-    height: calc(100vh - 112px);
+    height: calc(100vh - var(--countries-top));
 }
 
 .select-countries.active {
@@ -731,9 +767,12 @@ section.hidden {
     gap: 8px;
 }
 
-.country-icon img,
-.change-country img {
+.country-icon img {
     width: 32px;
+    aspect-ratio: 1/1;
+}
+.change-country img {
+    width: 24px;
     aspect-ratio: 1/1;
 }
 
@@ -747,6 +786,7 @@ section.hidden {
 .country-input {
     display: flex;
     align-items: center;
+    gap: 4px;
 }
 
 .input-tel {
@@ -754,18 +794,21 @@ section.hidden {
 }
 
 .change-country {
-    padding: 8px;
+    padding: 0 12px;
+    height: 42px;
+    border-radius: 8px;
     border: none;
     background: none;
     cursor: pointer;
-}
-
-.change-country div {
+    background-color: #EAEBED;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: white;
-    border: none;
+    gap: 4px;
+}
+
+.change-country span {
+    font-family: 'Lora';
+    font-size: 14px;
 }
 
 .phone-code {

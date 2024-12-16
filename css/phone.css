@@ -3,3 +3,9 @@
         right: -10%;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .commitment .checkmark:after {
+        left: 7px;
+    }
+}

@@ -8,13 +8,36 @@ document.querySelector('.button-email').addEventListener('click', function () {
     let emailRegex = /^[a-zA-Z0-9./%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/g;
     let email = document.querySelector('.input-email').value.trim();
 
-    if (password.length < 8 || password.length > 64 || !emailRegex.test(email)) {
+    // if (password.length < 8 || password.length > 64 || !emailRegex.test(email)) {
+    //     return;
+    // }
+
+    document.querySelector('.error-message.email').classList.add('hidden');
+    document.querySelector('.error-message.password').classList.add('hidden');
+
+    //исправление вывода только одной ошибки при двух
+    let errors = false;
+    if (!emailRegex.test(email)) {
+        document.querySelector('.error-message.email').classList.remove('hidden');
+        errors = true;
+        return;
+    }
+    if (password.length < 8 || password.length > 64) {
+        document.querySelector('.error-message.password').classList.remove('hidden');
+        errors = true;
         return;
     }
     nextScreen();
 });
 
 document.querySelector('.button-number').addEventListener('click', function () {
+    let phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    let phone = document.querySelector('.input-tel').value.trim();
+    if (!phoneRegex.test(phone)) {
+        document.querySelector('.error-message.phone').classList.remove('hidden');
+        return;
+    }
+    document.querySelector('.error-message.phone').classList.add('hidden');
     nextScreen();
 });
 
@@ -40,11 +63,13 @@ function showScreen(value) {
     }
     screens[value].classList.add('active');
     screens[value].classList.remove('hidden');
+    widthProgressBar();
 }
+showScreen(4);
 
 function widthProgressBar() {
-    const value = ((currentScreen + 1) / screens.length) * 100;
-    document.querySelector('.progress-bar .item span').style.setProperty('--value',`${value}%`);
+    const value = (currentScreen / screens.length) * 100;
+    document.querySelector('.progress-bar .item span').style.setProperty('--value', `${value}%`);
 }
 
 function nextScreen() {
@@ -112,3 +137,15 @@ document.querySelector('.round-button.close').addEventListener('click', function
     document.querySelector('.select-countries').classList.remove('active');
     document.querySelector('.select-countries-overlay').classList.remove('active');
 });
+
+let passcodeInputs = document.querySelectorAll('.input-passcode div');
+let currentIndex = 0;
+// for (let i = 0; i < passcodeInputs.length; i++) {
+//     document.querySelector('.passcode-button').addEventListener('click', function () {
+//         let value = passcodeInputs[i].value.trim();
+//         if (Number.isNaN(Number(value))) {
+//             passcodeInputs[currentIndex].textContent = value;
+//             currentIndex++;
+//         }
+//     });
+// }

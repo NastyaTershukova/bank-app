@@ -66,9 +66,15 @@
                         <span>Email</span>
                         <input type="email" class="input-email">
                     </div>
+                    <div class="error-message email hidden">
+                        <p>Your email is incorrect. Please enter again.</p>
+                    </div>
                     <div class="input-container">
                         <span>Password</span>
                         <input type="password" class="input-password">
+                    </div>
+                    <div class="error-message password hidden">
+                        <p>Your password is incorrect. Please enter again.</p>
                     </div>
                 </div>
                 <div class="sign-up-requests">
@@ -113,9 +119,13 @@
                         <span>Phone Number</span>
                         <div class="country-input">
                             <button class="change-country">
-                                <div><img src="img/canada.png"></div>
+                                <img src="img/canada.png">
+                                <span>+1</span>
                             </button>
                             <input type="tel" class="input-tel">
+                        </div>
+                        <div class="error-message phone hidden">
+                            <p>Your phone number is incorrect. Please enter again.</p>
                         </div>
                     </div>
                 </div>
@@ -290,40 +300,40 @@
                     </path>
                 </svg>
                 <div class="input-passcode">
-                    <input type="password" maxlength="1">
-                    <input type="password" maxlength="1">
-                    <input type="password" maxlength="1">
-                    <input type="password" maxlength="1">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
                 <div class="passcode-keyboard">
-                    <button>
+                    <button class="passcode-button">
                         <div>1</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>2</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>3</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>4</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>5</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>6</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>7</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>8</div>
                     </button>
-                    <button>
+                    <button class="passcode-button">
                         <div>9</div>
                     </button>
-                    <button class="zero-button">
+                    <button class="passcode-button zero">
                         <div>0</div>
                     </button>
                     <button class="delete-button">
