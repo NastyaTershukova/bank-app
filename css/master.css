@@ -691,22 +691,23 @@ section.hidden {
     justify-content: space-between;
 }
 
-.select-countries-ovelay {
+.select-countries-overlay {
     opacity: 0;
-    transition: opacity .5s ease-out;
-    pointer-events: all;
+    background-color: rgba(0,0,0,0);
+    transition: background-color .5s ease-out;
+    pointer-events: none;
 }
 
 .select-countries-overlay.active {
-    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 9999;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    pointer-events: all;
     opacity: 1;
-    pointer-events: none;
 }
 
 .select-countries {

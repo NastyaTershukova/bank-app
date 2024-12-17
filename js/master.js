@@ -65,7 +65,6 @@ function showScreen(value) {
     screens[value].classList.remove('hidden');
     widthProgressBar();
 }
-showScreen(4);
 
 function widthProgressBar() {
     const value = (currentScreen / screens.length) * 100;
@@ -149,3 +148,39 @@ let currentIndex = 0;
 //         }
 //     });
 // }
+
+const enteredPin = [];
+const repeatPin = [];
+let isRepeating = false;
+function enterPin(number) {
+    let sectionTitle = document.querySelector('.create-passcode .section-title');
+    if (isRepeating) {
+        let index = repeatPin.length;
+        repeatPin[index] = number;
+        console.log(repeatPin);
+        if (index >= 3) {
+            if (repeatPin.toString() === enteredPin.toString()) { // [3,4,5] => "345"
+                nextScreen();
+            } else {
+                //TODO: вывести ошибку о том что пинкоды не совпадают
+                sectionTitle.innerText = 'Create 4-digit app passcode';
+                isRepeating = false;
+                resetPin(repeatPin);
+                resetPin(enteredPin);
+            }
+        }
+        return;
+    }
+    let index = enteredPin.length;
+    enteredPin[index] = number;
+    console.log(enteredPin);
+    if (index >= 3) {
+        isRepeating = true;
+        sectionTitle.innerText = 'Repeat the passcode';
+        return;
+    }
+}
+
+function resetPin(array) {
+    array.splice(0, 4);
+}
