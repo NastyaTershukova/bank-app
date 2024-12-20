@@ -280,15 +280,34 @@ section.hidden {
     font-family: 'Lora';
 }
 
-.error-message {
+.error-message, .passcode-error-message {
     background-color: #F9DCE3;
     padding: 12px;
     border-radius: 4px;
     margin-top: 4px;
+    transition: .3s opacity ease-out;
+}
+
+.error-message {
     display: block;
 }
 
-.error-message p {
+.passcode-error-message {
+    opacity: 1;
+}
+
+.passcode-error-message {
+    position: fixed;
+    top: 72px;
+    width: calc(100vw - 32px);
+    z-index: 3;
+}
+
+.error-message-wrapper {
+    padding: 0 16px;
+}
+
+.error-message p, .passcode-error-message {
     font-size: 14px;
     font-weight: 600;
     color: #D52A39;
@@ -296,6 +315,10 @@ section.hidden {
 
 .error-message.hidden {
     display: none;
+}
+
+.passcode-error-message.hidden {
+    opacity: 0;
 }
 
 .sign-up-requests {
@@ -481,7 +504,7 @@ section.hidden {
     transform: rotate(-10deg);
 }
 
-.input-passcode div {
+.passcode-content {
     width: 80px;
     height: 42px;
     background-color: #EAEBED;
@@ -493,6 +516,18 @@ section.hidden {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.passcode-number {
+    width: 4px;
+    aspect-ratio: 1/1;
+    background-color: #000000;
+    border-radius: 50px;
+    display: block;
+}
+
+.passcode-number.hidden {
+    display: none;
 }
 
 .passcode-keyboard {
@@ -540,7 +575,6 @@ section.hidden {
 
 .documents-container {
     display: flex;
-    flex-direction: column;
     border: 2px solid #EAEBED;
     border-radius: 8px;
     padding: 16px;

@@ -41,9 +41,9 @@ document.querySelector('.button-number').addEventListener('click', function () {
     nextScreen();
 });
 
-document.querySelector('.button-code').addEventListener('click', function () {
-    nextScreen();
-});
+// document.querySelector('.button-code').addEventListener('click', function () {
+//     nextScreen();
+// });
 
 let slides = document.querySelectorAll('.start-section_content');
 let currentSlide = 0;
@@ -127,6 +127,23 @@ for (let i = 0; i < codeInputs.length; i++) {
     });
 }
 
+// let passcodeInputs = document.querySelectorAll('.passcode-number');
+// let currentIndex = 0;
+// document.querySelector('.passcode-button').addEventListener('click', function () {
+// for (let i = 0; i < passcodeInputs.length; i++) {
+//         passcodeInputs[i].classList.remove('hidden');
+//     };
+// });
+
+let passcodeInputs = document.querySelectorAll('.passcode-content');
+let currentIndex = 0;
+for (let i = 0; i < passcodeInputs.length; i++) {
+    document.querySelector('.passcode-button').addEventListener('click', function () {
+        let value = document.querySelector('.passcode-number');
+        passcodeInputs[i] = value.classList.remove('hidden');
+    });
+};
+
 document.querySelector('.change-country').addEventListener('click', function () {
     document.querySelector('.select-countries').classList.add('active');
     document.querySelector('.select-countries-overlay').classList.add('active');
@@ -136,18 +153,6 @@ document.querySelector('.round-button.close').addEventListener('click', function
     document.querySelector('.select-countries').classList.remove('active');
     document.querySelector('.select-countries-overlay').classList.remove('active');
 });
-
-let passcodeInputs = document.querySelectorAll('.input-passcode div');
-let currentIndex = 0;
-// for (let i = 0; i < passcodeInputs.length; i++) {
-//     document.querySelector('.passcode-button').addEventListener('click', function () {
-//         let value = passcodeInputs[i].value.trim();
-//         if (Number.isNaN(Number(value))) {
-//             passcodeInputs[currentIndex].textContent = value;
-//             currentIndex++;
-//         }
-//     });
-// }
 
 const enteredPin = [];
 const repeatPin = [];
@@ -163,6 +168,13 @@ function enterPin(number) {
                 nextScreen();
             } else {
                 //TODO: вывести ошибку о том что пинкоды не совпадают
+                function showError() {
+                    document.querySelector('.passcode-error-message').classList.remove('hidden');
+                    setTimeout(() => {
+                        document.querySelector('.passcode-error-message').classList.add('hidden');
+                    }, 3000);
+                }
+                showError();
                 sectionTitle.innerText = 'Create 4-digit app passcode';
                 isRepeating = false;
                 resetPin(repeatPin);
@@ -176,7 +188,7 @@ function enterPin(number) {
     console.log(enteredPin);
     if (index >= 3) {
         isRepeating = true;
-        sectionTitle.innerText = 'Repeat the passcode';
+        sectionTitle.innerText = 'Repeat your app passcode';
         return;
     }
 }
@@ -184,3 +196,17 @@ function enterPin(number) {
 function resetPin(array) {
     array.splice(0, 4);
 }
+
+document.querySelector('.button-code').addEventListener('click', function () {
+    let checkbox = document.querySelector('.checkbox');
+    if (!checkbox.checked) {
+        document.querySelector('.error-message.checkbox').classList.remove('hidden');
+        return;
+    }
+    document.querySelector('.error-message.checkbox').classList.add('hidden');
+    nextScreen();
+});
+
+document.querySelector('.button-citizen').addEventListener('click', function () {
+    nextScreen();
+});

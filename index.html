@@ -275,7 +275,7 @@
                 </div>
                 <span class="resend-code">Resend Code</span>
                 <label class="commitment">
-                    <input type="checkbox">
+                    <input type="checkbox" class="checkbox" onclick="checkedCheckbox()">
                     <span class="checkmark" checked="checked"></span>
                     <p>I agree to receive special offers and promotions via SMS at the number provided. Consent is
                         not a
@@ -285,6 +285,9 @@
                         details
                     </p>
                 </label>
+                <div class="error-message checkbox hidden">
+                    <p>You must agree to continue.</p>
+                </div>
                 <div class="section-buttons">
                     <button class="section-button blue button-code">Next</button>
                 </div>
@@ -300,10 +303,18 @@
                     </path>
                 </svg>
                 <div class="input-passcode">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="passcode-content">
+                        <div class="passcode-number hidden"></div>
+                    </div>
+                    <div class="passcode-content">
+                        <div class="passcode-number hidden"></div>
+                    </div>
+                    <div class="passcode-content">
+                        <div class="passcode-number hidden"></div>
+                    </div>
+                    <div class="passcode-content">
+                        <div class="passcode-number hidden"></div>
+                    </div>
                 </div>
                 <div class="passcode-keyboard">
                     <button class="passcode-button" onclick="enterPin(1)">
@@ -347,6 +358,11 @@
                 </div>
             </div>
         </section>
+        <div class="error-message-wrapper">
+            <div class="passcode-error-message hidden">
+                <p>Passcodes do not match. Please try again.</p>
+            </div>
+        </div>
         <section class="section citizen">
             <div class="section-content">
                 <h2 class="section-title">Are you a citizen of United States?</h2>
@@ -354,7 +370,7 @@
                 <img class="country-flag" src="img/usa.webp">
                 <div class="start-section-buttons">
                     <button class="section-button white">No, I'm not</button>
-                    <button class="section-button blue">Confirm</button>
+                    <button class="section-button blue button-citizen">Confirm</button>
                 </div>
             </div>
         </section>
@@ -364,7 +380,7 @@
                 <p class="section-description">Please submit a valid document to confirm your residency in Singapure.
                 </p>
                 <div class="documents-container">
-                    <div class="document-row">
+                    <div class="document-row active">
                         <div class="document-title">
                             <svg class="document-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                                 <path
