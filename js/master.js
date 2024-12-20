@@ -127,23 +127,6 @@ for (let i = 0; i < codeInputs.length; i++) {
     });
 }
 
-// let passcodeInputs = document.querySelectorAll('.passcode-number');
-// let currentIndex = 0;
-// document.querySelector('.passcode-button').addEventListener('click', function () {
-// for (let i = 0; i < passcodeInputs.length; i++) {
-//         passcodeInputs[i].classList.remove('hidden');
-//     };
-// });
-
-let passcodeInputs = document.querySelectorAll('.passcode-content');
-let currentIndex = 0;
-for (let i = 0; i < passcodeInputs.length; i++) {
-    document.querySelector('.passcode-button').addEventListener('click', function () {
-        let value = document.querySelector('.passcode-number');
-        passcodeInputs[i] = value.classList.remove('hidden');
-    });
-};
-
 document.querySelector('.change-country').addEventListener('click', function () {
     document.querySelector('.select-countries').classList.add('active');
     document.querySelector('.select-countries-overlay').classList.add('active');
@@ -154,6 +137,17 @@ document.querySelector('.round-button.close').addEventListener('click', function
     document.querySelector('.select-countries-overlay').classList.remove('active');
 });
 
+const passcodeInputs = document.querySelectorAll('.passcode-content');
+function handlePinDots(pin) {
+    for (let i = 0; i < passcodeInputs.length; i++) {
+        if (typeof pin[i] === 'undefined') {
+            passcodeInputs[i].classList.add('hidden');
+        } else {
+            passcodeInputs[i].classList.remove('hidden');
+        }
+    };
+}
+
 const enteredPin = [];
 const repeatPin = [];
 let isRepeating = false;
@@ -162,33 +156,35 @@ function enterPin(number) {
     if (isRepeating) {
         let index = repeatPin.length;
         repeatPin[index] = number;
-        console.log(repeatPin);
         if (index >= 3) {
             if (repeatPin.toString() === enteredPin.toString()) { // [3,4,5] => "345"
+                sectionTitle.innerText = 'Create 4-digit app passcode';
+                isRepeating = false;
                 nextScreen();
+                //TODO: записать введенный пинкод в отдельную переменную, в формате строки.
+                //Сбросить переменные enteredPin и repeatPin
             } else {
-                //TODO: вывести ошибку о том что пинкоды не совпадают
-                function showError() {
-                    document.querySelector('.passcode-error-message').classList.remove('hidden');
-                    setTimeout(() => {
-                        document.querySelector('.passcode-error-message').classList.add('hidden');
-                    }, 3000);
-                }
-                showError();
+                document.querySelector('.passcode-error-message').classList.remove('hidden');
+                setTimeout(() => {
+                    document.querySelector('.passcode-error-message').classList.add('hidden');
+                }, 3000);
                 sectionTitle.innerText = 'Create 4-digit app passcode';
                 isRepeating = false;
                 resetPin(repeatPin);
                 resetPin(enteredPin);
+                handlePinDots(enteredPin);
             }
         }
+        handlePinDots(repeatPin);
         return;
     }
     let index = enteredPin.length;
     enteredPin[index] = number;
-    console.log(enteredPin);
+    handlePinDots(enteredPin);
     if (index >= 3) {
         isRepeating = true;
         sectionTitle.innerText = 'Repeat your app passcode';
+        handlePinDots(repeatPin);
         return;
     }
 }
