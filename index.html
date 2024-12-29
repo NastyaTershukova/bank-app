@@ -347,7 +347,7 @@
                     <button class="passcode-button zero" onclick="enterPin(0)">
                         <div>0</div>
                     </button>
-                    <button class="delete-button">
+                    <button class="delete-button" onclick="deletePin()">
                         <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000"
                                 viewBox="0 0 256 256">
                                 <path
@@ -429,31 +429,54 @@
                     </div>
                 </div>
             </div>
-            <button class="section-button blue">Next</button>
+            <div class="section-buttons">
+                <button class="section-button blue button-documents">Next</button>
+            </div>
         </section>
         <section class="section discover-banking">
+            <!-- <button onclick="previousScreen()" class="round-button left hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z">
+                        </path>
+                    </svg>
+                </button> -->
             <div class="section-content">
                 <h2 class="section-title">Discover Mobile Banking That Makes Life Easy!</h2>
-                <div class="cashback-container">
+                <div class="cashback-container active">
                     <img src="img/cashback.jpg">
                     <div class="cashback-text">
                         <h3>Earn up to 2% cashback</h3>
                         <p>Get cashback on eligible Mastercard payments.</p>
                     </div>
                 </div>
+                <div class="cashback-container">
+                    <img src="img/shopping.jpg">
+                    <div class="cashback-text">
+                        <h3>Earn rewards every time you shop</h3>
+                        <p>Enjoy exclusive perks on all eligible purchases with your Mastercard.</p>
+                    </div>
+                </div>
+                <div class="cashback-container">
+                    <img src="img/money.avif">
+                    <div class="cashback-text">
+                        <h3>Get up to 3% back on your purchases</h3>
+                        <p>Save more with cashback rewards on qualifying transactions.</p>
+                    </div>
+                </div>
                 <div class="progress-bar-cashback">
-                    <button class="item selected">
+                    <button class="pill selected">
                         <div><span></span></div>
                     </button>
-                    <button class="item">
+                    <button class="pill">
                         <div><span></span></div>
                     </button>
-                    <button class="item">
+                    <button class="pill">
                         <div><span></span></div>
                     </button>
                 </div>
                 <div class="section-buttons">
-                    <button class="section-button blue">Verify Now</button>
+                    <button class="section-button blue verify-now">Verify Now</button>
                     <button class="section-button white">Verify Later</button>
                 </div>
             </div>
@@ -467,63 +490,65 @@
                 <button class="choose-plan-button active">Bloom</button>
                 <button class="choose-plan-button">Ruby</button>
             </div>
-            <img src="img/credit-card.avif">
-            <div class="top-offers">
-                <div class="top-offers_header">
-                    <h3>Lavendr Bloom</h3>
-                    <span>from $19/month</span>
-                </div>
-                <hr>
-                <span class="top-offers_title">TOP OFFERS</span>
-                <div class="top-offers_list">
-                    <div class="top-offer_container">
-                        <div class="top-offer_icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                                <path
-                                    d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="top-offer_description">
-                            <h3>Basic Banking Features</h3>
-                            <p>Includes essential services like account management, money tranfers, and digital
-                                payments.
-                            </p>
-                        </div>
+            <div class="choose-plan-content">
+                <!-- <div class="top-offers">
+                    <img src="img/credit-card.avif">
+                    <div class="top-offers_header">
+                        <h3>Lavendr Bloom</h3>
+                        <span>from $19/month</span>
                     </div>
                     <hr>
-                    <div class="top-offer_container">
-                        <div class="top-offer_icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                                <path
-                                    d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
-                                </path>
-                            </svg>
+                    <span class="top-offers_title">TOP OFFERS</span>
+                    <div class="top-offers_list">
+                        <div class="top-offer_container">
+                            <div class="top-offer_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                    <path
+                                        d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="top-offer_description">
+                                <h3>Basic Banking Features</h3>
+                                <p>Includes essential services like account management, money tranfers, and digital
+                                    payments.
+                                </p>
+                            </div>
                         </div>
-                        <div class="top-offer_description">
-                            <h3>Basic Banking Features</h3>
-                            <p>Includes essential services like account management, money tranfers, and digital
-                                payments.
-                            </p>
+                        <hr>
+                        <div class="top-offer_container">
+                            <div class="top-offer_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                    <path
+                                        d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="top-offer_description">
+                                <h3>Basic Banking Features</h3>
+                                <p>Includes essential services like account management, money tranfers, and digital
+                                    payments.
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="top-offer_container">
+                            <div class="top-offer_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                    <path
+                                        d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="top-offer_description">
+                                <h3>Basic Banking Features</h3>
+                                <p>Includes essential services like account management, money tranfers, and digital
+                                    payments.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <hr>
-                    <div class="top-offer_container">
-                        <div class="top-offer_icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                                <path
-                                    d="M24,104H48v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16H208V104h24a8,8,0,0,0,4.19-14.81l-104-64a8,8,0,0,0-8.38,0l-104,64A8,8,0,0,0,24,104Zm40,0H96v64H64Zm80,0v64H112V104Zm48,64H160V104h32ZM128,41.39,203.74,88H52.26ZM248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208Z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="top-offer_description">
-                            <h3>Basic Banking Features</h3>
-                            <p>Includes essential services like account management, money tranfers, and digital
-                                payments.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
             <div class="continue-container">
                 <button class="section-button blue">Continue with Bloom</button>
@@ -534,6 +559,7 @@
         </footer>
     </div>
     <script src="js/master.js"></script>
+    <script src="js/plans.js"></script>
 </body>
 
 </html>

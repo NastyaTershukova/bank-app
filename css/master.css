@@ -81,6 +81,24 @@ section.hidden {
     padding: 0 var(--page-padding);
 }
 
+.section.discover-banking {
+    padding: var(--page-padding);
+}
+
+.section.choose-plan {
+    padding: var(--page-padding);
+}
+
+.section.discover-banking .round-button {
+    top: 32px;
+    position: fixed;
+    /* transition: .5s ease-in transform; */
+}
+
+/* .round-button.hidden {
+    transform: translateY(-96px);
+} */
+
 .app-icon {
     display: flex;
     background-color: #3B51C6;
@@ -280,7 +298,8 @@ section.hidden {
     font-family: 'Lora';
 }
 
-.error-message, .passcode-error-message {
+.error-message,
+.passcode-error-message {
     background-color: #F9DCE3;
     padding: 12px;
     border-radius: 4px;
@@ -307,7 +326,8 @@ section.hidden {
     padding: 0 16px;
 }
 
-.error-message p, .passcode-error-message {
+.error-message p,
+.passcode-error-message {
     font-size: 14px;
     font-weight: 600;
     color: #D52A39;
@@ -388,7 +408,8 @@ section.hidden {
     margin: 0 auto;
 }
 
-.input-passcode, .section.create-passcode .section-title {
+.input-passcode,
+.section.create-passcode .section-title {
     margin-left: auto;
     margin-right: auto;
 }
@@ -495,9 +516,9 @@ section.hidden {
     transform: rotate(45deg);
 }
 
-.round-button.left {
+/* .round-button.left {
     left: var(--page-padding);
-}
+} */
 
 .lock {
     margin: 0 auto;
@@ -506,7 +527,7 @@ section.hidden {
 
 .passcode-content {
     width: 80px;
-    height: 42px;
+    height: 48px;
     background-color: #EAEBED;
     border: none;
     border-radius: 8px;
@@ -519,15 +540,16 @@ section.hidden {
 }
 
 .passcode-number {
-    width: 4px;
+    width: 8px;
     aspect-ratio: 1/1;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50px;
-    display: block;
+    opacity: 1;
+    transition: .2s opacity ease-out;
 }
 
 .passcode-content.hidden .passcode-number {
-    display: none;
+    opacity: 0;
 }
 
 .passcode-keyboard {
@@ -575,6 +597,7 @@ section.hidden {
 
 .documents-container {
     display: flex;
+    flex-direction: column;
     border: 2px solid #EAEBED;
     border-radius: 8px;
     padding: 16px;
@@ -630,6 +653,11 @@ section.hidden {
     padding: 8px;
     display: flex;
     justify-content: center;
+    display: none;
+}
+
+.cashback-container.active {
+    display: flex;
 }
 
 .cashback-container img {
@@ -665,14 +693,14 @@ section.hidden {
     margin: 4px auto 0 auto;
 }
 
-.progress-bar-cashback .item {
+.progress-bar-cashback .pill {
     background: none;
     cursor: pointer;
     padding: 3px 2px;
     border: 0;
 }
 
-.progress-bar-cashback .item div {
+.progress-bar-cashback .pill div {
     background-color: #CACFD6;
     border: 0.5px solid rgba(255, 255, 255, 0);
     height: 8px;
@@ -684,11 +712,11 @@ section.hidden {
 }
 
 
-.progress-bar-cashback .item.selected div {
-    height: 16px;
+.progress-bar-cashback .pill.selected div {
+    height: 14px;
 }
 
-.progress-bar-cashback .item.selected span {
+.progress-bar-cashback .pill.selected span {
     background-color: #3B51C6;
     height: 0;
     width: 100%;
@@ -727,7 +755,7 @@ section.hidden {
 
 .select-countries-overlay {
     opacity: 0;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     transition: background-color .5s ease-out;
     pointer-events: none;
 }
@@ -806,6 +834,7 @@ section.hidden {
     width: 32px;
     aspect-ratio: 1/1;
 }
+
 .change-country img {
     width: 24px;
     aspect-ratio: 1/1;
@@ -877,7 +906,7 @@ section.hidden {
 }
 
 .choose-plan_header {
-    margin-top: 24px;
+    margin-top: var(--section-gap);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -895,7 +924,7 @@ section.hidden {
 
 .choose-plan_buttons {
     display: flex;
-    margin-top: 24px;
+    margin-top: var(--section-gap);
     justify-content: center;
     padding: 2px;
     border-radius: 6px;
@@ -925,13 +954,49 @@ section.hidden {
     margin: 16px -16px 0 -16px;
     height: 280px;
     object-fit: cover;
+    width: calc(100% + 32px);
+}
+
+.choose-plan-image {
+    position: relative;
+    width: 100%;
+}
+
+.open-top-offers {
+    background: none;
+    cursor: pointer;
+    border: 0;
+    padding: 6px 4px;
+    display: flex;
+    position: absolute; /* Позиционируем кнопку */ /* Регулируем положение сверху родителя */
+    left: 50%; /* Ставим по центру */
+    transform: translateX(-50%);
+    top: 8px; 
+}
+
+.open-top-offers div {
+    width: 120px;
+    height: 4px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .top-offers {
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
-    margin: 0 -16px;
     padding: 16px;
+    position: fixed;
+    top: 60%;
+    width: 100%;
+    background-color: #ffffff;
+    transition: .5s ease-in-out;
+}
+
+.top-offers.opened {
+    height: 100%;
+    top: 0;
 }
 
 .top-offers_header {
@@ -939,6 +1004,7 @@ section.hidden {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .top-offers_header span {
@@ -1016,5 +1082,4 @@ section.hidden {
     transform: translate(-50%);
     padding: 16px;
     width: 100%;
-    display: none;
 }
