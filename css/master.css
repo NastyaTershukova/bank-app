@@ -868,6 +868,7 @@ section.hidden {
     display: flex;
     align-items: center;
     gap: 4px;
+    color: #000000;
 }
 
 .change-country span {
