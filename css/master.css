@@ -575,6 +575,7 @@ section.hidden {
     font-weight: 800;
     font-family: 'Lora';
     cursor: pointer;
+    color: #000000;
 }
 
 .passcode-keyboard button {
