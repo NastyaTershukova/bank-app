@@ -16,6 +16,7 @@ body {
     padding: 0;
     font-family: 'Lora';
     background: #ffffff;
+    overflow: hidden;
 }
 
 header {
@@ -970,8 +971,8 @@ section.hidden {
     border: 0;
     padding: 6px 4px;
     display: flex;
-    position: absolute; /* Позиционируем кнопку */ /* Регулируем положение сверху родителя */
-    left: 50%; /* Ставим по центру */
+    position: absolute;
+    left: 50%;
     transform: translateX(-50%);
     top: 8px; 
 }
@@ -992,6 +993,7 @@ section.hidden {
     position: fixed;
     top: 60%;
     width: 100%;
+    left: 0;
     background-color: #ffffff;
     transition: .5s ease-in-out;
 }

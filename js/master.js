@@ -66,7 +66,6 @@ function showScreen(value) {
     widthProgressBar();
 }
 
-
 function widthProgressBar() {
     const value = (currentScreen / (screens.length - 2)) * 100;
     document.querySelector('.progress-bar .item span').style.setProperty('--value', `${value}%`);
