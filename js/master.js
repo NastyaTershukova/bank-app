@@ -66,8 +66,6 @@ function showScreen(value) {
     widthProgressBar();
 }
 
-showScreen(8);
-
 
 function widthProgressBar() {
     const value = (currentScreen / (screens.length - 2)) * 100;
